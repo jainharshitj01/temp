@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+}
+
+:root{
+    --text: 1.5rem ;
+    --head: calc(1rem + 5vw);
+    --bg-color: #faf4f6;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section{
+    min-height: 100vh;
+    background-image: url(https://images.hdqwalls.com/download/anonymus-hacker-in-mask-pointing-finger-mj-1920x1080.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: rgb(234, 239, 233);
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+}
+
+@keyframes movedown{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.navbar ul{
+list-style: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+.navbar ul li a{
+    text-decoration: none ;
+    color: rgb(239, 230, 230);
+    /* border: 2px solid transparent; */
+
+}
+
+.navbar ul li a:hover{
+    border-bottom: 2px solid black;
+
+}
+
+.hero-text{
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+
+.hero-text a {
+    color: black;
+    background-color: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    transition: opacity 250ms linear;
+}
+
+.hero-text a:hover{
+    opacity: 0.5;
+}
+
+.hero-text h2{
+    font-size: var(--head);
+}
+
+.hero-text p{
+    font-size: 3rem;
+}
+
+
+
+
